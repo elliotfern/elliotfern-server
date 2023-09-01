@@ -8,7 +8,7 @@ const isAuthenticated = require("../middlewares/isAuthenticated")
 // POST "/api/auth/signup" => esta ruta sirve para transmitir a la base de datos el fomulario de registro de un nuevo usuario
 router.post("/signup", async (req, res, next) => {
 
-  const { username, email, password } = req.body
+  const { username, email, password, lang } = req.body
 
   // validacion de los campos del formulario
   if (!username) {
@@ -40,6 +40,11 @@ router.post("/signup", async (req, res, next) => {
       res.status(400).json({ errorMessagePassword: "The password must have at least 1 uppercase letter, 1 lowercase letter, 1 special character, and be 8 characters or more." })
       return; // detiene la ejecucion de la ruta
     }
+  }
+
+  if (!lang) {
+    res.status(400).json({ errorMessageLang: "You must provide a prefered language" })
+    return;
   }
 
   // validacion extra: buscar en la base de datos que el usuario o el email no esten repetidos
@@ -109,6 +114,8 @@ router.post("/login", async (req, res, next) => {
     const payload = {
       _id: foundUser._id,
       email: foundUser.email,
+      lang: foundUser.lang,
+      role: foundUser.role,
       // si tuvieramos roles, tienen que ir aqui
     }
 

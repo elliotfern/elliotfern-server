@@ -8,17 +8,19 @@ router.get("/", (req, res, next) => {
 const authRouter = require("./auth.routes")
 router.use("/auth", authRouter)
 
-/*
+
 // rutas profile
 const profileRouter = require("./profile.routes")
 router.use("/profile", profileRouter)
 
-// rutas comments
-const commentsRouter = require("./comments.routes")
-router.use("/comments", commentsRouter)
 
+// rutas comments
+const commentRouter = require("./comment.routes")
+router.use("/comment", commentRouter)
+
+/*
 // rutas book
-const commentsRouter = require("./comments.routes")
-router.use("/comments", commentsRouter)
+const bookRouter = require("./book.routes")
+router.use("/book", bookRouter)
 */
 module.exports = router;
