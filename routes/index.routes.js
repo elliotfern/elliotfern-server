@@ -18,9 +18,9 @@ router.use("/profile", profileRouter)
 const commentRouter = require("./comment.routes")
 router.use("/comment", commentRouter)
 
-/*
+
 // rutas book
 const bookRouter = require("./book.routes")
 router.use("/book", bookRouter)
-*/
+
 module.exports = router;

@@ -39,13 +39,25 @@ router.post("/:articleId", async (req, res, next) => {
     }
 })
 
-// PUT "/api/comment/:commentId" => edita un comentario en concreto
+// PUT "/api/comment/:commentId" => edita un comentario en concreto por su ID
 router.put("/:commentId", async (req, res, next) => {
     const { comment } = req.body;
     const { commentId } = req.params;
 
     try {
         const response = await Comment.findByIdAndUpdate(commentId, { comment })
+        res.json(response)
+    } catch (error) {
+        next(error)
+    }
+})
+
+// DELETE "/api/comment/:commentId" => borra un comentario en concreto por su ID
+router.delete("/:commentId", async (req, res, next) => {
+    const { commentId } = req.params;
+
+    try {
+        const response = await Comment.findByIdAndDelete(commentId)
         res.json(response)
     } catch (error) {
         next(error)
