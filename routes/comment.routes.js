@@ -11,6 +11,7 @@ router.get("/:articleId", async (req, res, next) => {
 
     try {
         const response = await Comment.find({ articleId: articleId })
+            .populate({ path: 'userCreatorId', select: 'fullName' })
         res.json(response)
     } catch (error) {
         next(error)
