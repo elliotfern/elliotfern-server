@@ -68,6 +68,7 @@ router.post("/signup", async (req, res, next) => {
       username: username,
       email: email,
       password: passwordHash,
+      lang: lang,
     });
 
     res.json("User create!")
