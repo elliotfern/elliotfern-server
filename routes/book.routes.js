@@ -11,7 +11,8 @@ router.get("/", async (req, res, next) => {
 
     try {
         const response = await Book.find()
-            .populate({ path: 'userCreatorId', select: 'fullName' })
+            .populate("userCreatorId")
+        console.log(response)
         res.json(response)
     } catch (error) {
         next(error)

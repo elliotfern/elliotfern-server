@@ -18,12 +18,11 @@ const bookSchema = new Schema({
         required: true,
     },
 
-    userCreatorId: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "User",
-        },
-    ],
+    userCreatorId:
+    {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+    },
 
     imageBook: {
         type: String,

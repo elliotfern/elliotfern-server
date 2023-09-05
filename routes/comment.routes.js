@@ -34,7 +34,13 @@ router.post("/:articleId", async (req, res, next) => {
 
     try {
         const response = await Comment.create({ comment, articleId, userCreatorId })
-        res.json(response)
+
+        // Realizar una población adicional para obtener el nombre del usuario creador
+        const populatedResponse = await Comment.populate(response, { path: 'userCreatorId', select: 'fullName username' });
+
+        console.log("fullname", populatedResponse.userCreatorId.fullName);
+        console.log("username", populatedResponse.userCreatorId.username);
+        res.json(populatedResponse);
     } catch (error) {
         next(error)
     }
