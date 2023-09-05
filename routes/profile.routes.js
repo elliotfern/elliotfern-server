@@ -26,7 +26,7 @@ router.get("/", async (req, res, next) => {
 
     try {
         const response = await User.findById(userId).
-            select({ username: 1, fullName: 1, email: 1, imageProfile: 1, lang: 1, savedCourses: 1, savedLessons: 1 })
+            select({ username: 1, fullName: 1, email: 1, imageProfile: 1, lang: 1, savedCourses: 1, savedLessons: 1, role: 1 })
 
         res.json(response)
     } catch (error) {
