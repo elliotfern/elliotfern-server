@@ -4,7 +4,7 @@ const Book = require("../models/Book.model")
 const User = require("../models/User.model")
 
 const jwt = require("jsonwebtoken")
-const isAuthenticated = require("../middlewares/isAuthenticated")
+//const isAuthenticated = require("../middlewares/isAuthenticated")
 
 // GET "/api/book/" => envia todos los libros de la bd
 router.get("/", async (req, res, next) => {

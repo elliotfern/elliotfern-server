@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs")
 const User = require("../models/User.model")
 
 const jwt = require("jsonwebtoken")
-const isAuthenticated = require("../middlewares/isAuthenticated")
+// const isAuthenticated = require("../middlewares/isAuthenticated")
 const uploader = require("../middlewares/cloudinary.config.js");
 
 // GET "/api/profile" => esta ruta sirve para consultar en la BD toda la informacion de un usuario registrado

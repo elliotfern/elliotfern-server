@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs")
 const Comment = require("../models/Comment.model")
 
 const jwt = require("jsonwebtoken")
-const isAuthenticated = require("../middlewares/isAuthenticated")
+//const isAuthenticated = require("../middlewares/isAuthenticated")
 
 // GET "/api/comment/:articleId" => envia todos los comentarios de un articulo determinado
 router.get("/:articleId", async (req, res, next) => {
