@@ -1,9 +1,10 @@
-
 const router = require("express").Router();
+const Book = require("../models/Book.model")
+const User = require("../models/User.model")
 
 const uploader = require("../middlewares/cloudinary.config.js");
 
-// PATCH "/api/book/upload" => esta ruta sirve para subir a cloudinary una imagen y guardar la URL en la base de datos
+// PATCH "/api/:idBook/upload" => esta ruta sirve para subir a cloudinary una imagen y guardar la URL en la base de datos
 router.patch("/:idBook/upload", uploader.single("image"), async (req, res, next) => {
 
     const { idBook } = req.params;
@@ -20,7 +21,7 @@ router.patch("/:idBook/upload", uploader.single("image"), async (req, res, next)
 
     try {
         // actualizar el campo profileImage
-        await User.findByIdAndUpdate(idBook, { imageBook: req.file.path })
+        await Book.findByIdAndUpdate(idBook, { imageBook: req.file.path })
         res.json("User image profile updated")
 
     } catch (error) {
