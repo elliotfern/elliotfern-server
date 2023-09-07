@@ -62,11 +62,11 @@ router.get("/:idBook", async (req, res, next) => {
 
 // PUT "/api/book/:idBook" => edita un libro en concreto por su ID
 router.put("/:idBook", async (req, res, next) => {
-    const { bookTitle, bookAuthor, topic } = req.body;
+    const { bookTitle, bookAuthor, topic, imageBook } = req.body;
     const { idBook } = req.params;
 
     try {
-        const response = await Book.findByIdAndUpdate(idBook, { bookTitle, bookAuthor, topic })
+        const response = await Book.findByIdAndUpdate(idBook, { bookTitle, bookAuthor, topic, imageBook })
         res.json(response)
     } catch (error) {
         next(error)
