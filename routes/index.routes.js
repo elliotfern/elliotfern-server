@@ -23,4 +23,8 @@ router.use("/comment", commentRouter)
 const bookRouter = require("./book.routes")
 router.use("/book", bookRouter)
 
+// rutas upload imagen
+const uploadRoutes = require("./upload.routes");
+router.use("/upload", uploadRoutes);
+
 module.exports = router;

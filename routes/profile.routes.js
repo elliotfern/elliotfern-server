@@ -131,8 +131,8 @@ router.patch("/savedCourses", async (req, res, next) => {
     const userId = decodedToken._id
 
     try {
-        // actualizar el campo profileImage
-        await User.findByIdAndUpdate(userId, { $push: { savedCourses } })
+        // actualizar el campo savedCourses
+        await User.findByIdAndUpdate(userId, { $addToSet: { savedCourses } })
         res.json("Courses saved")
     } catch (error) {
         next(error)
@@ -178,8 +178,8 @@ router.patch("/savedLessons", async (req, res, next) => {
     const userId = decodedToken._id
 
     try {
-        // actualizar el campo profileImage
-        await User.findByIdAndUpdate(userId, { $push: { savedLessons } })
+        // actualizar el campo SavedLessons
+        await User.findByIdAndUpdate(userId, { $addToSet: { savedLessons } })
         res.json("Lessons saved")
     } catch (error) {
         next(error)
@@ -188,6 +188,3 @@ router.patch("/savedLessons", async (req, res, next) => {
 
 
 module.exports = router;
-
-// https://elliotfern.com/controller/blog.php?type=articleId&id=11
-// https://elliotfern.com/controller/blog.php?type=curso&idCurso=1&langCurso=es
