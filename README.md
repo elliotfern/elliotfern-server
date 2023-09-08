@@ -94,7 +94,7 @@ Book model
 
 ### Collaborator
 
-[Elliot Fernandez](www.elliotfern.com)
+[Elliot Fernandez](https://elliotfern.com)
 
 ### Project
 
@@ -102,4 +102,4 @@ Book model
 
 [Repository Link Server ](https://github.com/elliotfern/open-history-server)
 
-[Deploy Link](www.elliotfern.com)
+[Deploy Link](https://elliotfern.com)
