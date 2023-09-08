@@ -4,7 +4,7 @@ Open History
 
 ## [See the App!](https://open-history.netlify.app/en/homepage)
 
-![App Logo](your-image-logo-path-or-name)
+![App Logo](https://media.elliotfern.com/img/openhistory.png)
 
 ## Description
 
