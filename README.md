@@ -34,7 +34,7 @@ User model
   email: {type: String, required: true, unique: true},
   password: {type: String, required: true},
   fullName: {type: String},
-  imageProfile: {type: String}
+  imageProfile: {type: String},
   role: {type: String, enum ["admin", "user"]},
   lang: {type: String, enum ["en", "es", "ca", "it", "fr"]},
   savedCourses: [{type: String}],
