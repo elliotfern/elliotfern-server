@@ -1,6 +1,4 @@
-# Project Name
-
-Open History
+# Open History
 
 ## [See the App!](https://open-history.netlify.app/en/homepage)
 
