@@ -1,6 +1,6 @@
-# Open History
+# Elliotfern.com server NodeJS & Express & MongoDB
 
-## [See the App!](https://open-history.netlify.app/en/homepage)
+## [See the App!](https://elliotfern.com)
 
 ![App Logo](https://media.elliotfern.com/img/openhistory.png)
 
@@ -8,9 +8,9 @@
 
 Open History is an independent publishing project that offers free access to History courses to its readers.
 
-#### [Client Repo here](https://github.com/elliotfern/open-history-client)
+#### [Client Repo here](https://github.com/elliotfern/elliotfern-web)
 
-#### [Server Repo here](https://github.com/elliotfern/open-history-server)
+#### [Server Repo here](https://github.com/elliotfern/elliotfern-server)
 
 ## Backlog Functionalities
 
@@ -96,8 +96,8 @@ Book model
 
 ### Project
 
-[Repository Link Client](https://github.com/elliotfern/open-history-client)
+[Repository Link Client](https://github.com/elliotfern/elliotfern-web)
 
-[Repository Link Server ](https://github.com/elliotfern/open-history-server)
+[Repository Link Server ](https://github.com/elliotfern/elliotfern-server)
 
 [Deploy Link](https://elliotfern.com)
